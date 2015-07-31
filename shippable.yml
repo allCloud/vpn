@@ -1,0 +1,22 @@
+language: python
+
+branches:
+  only:
+  - master
+  - develop
+
+
+env:
+  global:
+    - PROXY_HOST=89.47.25.153
+    - PROXY_PORT=8800
+    - LOCAL_IP=
+    - no_proxy=localhost,127.0.0.1,localaddress,.localdomain.com
+
+
+notifications:
+  email:
+    recipients:
+      - jason@htmlgraphic.com
+    on_success: change
+    on_failure: always

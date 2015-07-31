@@ -1,0 +1,13 @@
+vpn-l2tp:
+  image: htmlgraphic/vpn:0.5.0
+  ports:
+    - "500:500/udp"
+    - "1701:1701/tcp"
+    - "4500:4500/udp"
+  target_num_containers: 1
+  privileged: true
+  environment:
+    - PROXY_HOST=
+    - PROXY_PORT=
+    - LOCAL_IP=
+    - no_proxy=localhost,127.0.0.1,localaddress,.localdomain.com
